@@ -1,1 +1,608 @@
-Catherine D. Grant
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catherine D. Grant | Water Policy & Resource Economics</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #1a2744;
+    --slate: #2d3e50;
+    --teal: #2a7f8e;
+    --teal-light: #3aa5b5;
+    --sand: #f5f0e8;
+    --cream: #faf8f4;
+    --warm-gray: #6b6560;
+    --text: #2c2a27;
+    --text-light: #5a5650;
+    --accent-gold: #c49a3c;
+    --border: #e0dbd3;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Source Sans 3', sans-serif;
+    font-weight: 400;
+    color: var(--text);
+    background: var(--cream);
+    line-height: 1.7;
+    font-size: 16px;
+  }
+
+  /* NAV */
+  nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    background: rgba(26, 39, 68, 0.97);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+  nav .nav-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    height: 60px;
+  }
+  nav .nav-name {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #fff;
+    letter-spacing: 0.02em;
+  }
+  nav .nav-links { display: flex; gap: 2rem; }
+  nav .nav-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.3s;
+  }
+  nav .nav-links a:hover { color: #fff; }
+
+  /* HERO */
+  .hero {
+    margin-top: 60px;
+    background: linear-gradient(145deg, var(--navy) 0%, var(--slate) 55%, var(--teal) 100%);
+    padding: 5rem 2rem 4rem;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -20%;
+    width: 600px;
+    height: 600px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(42,127,142,0.15) 0%, transparent 70%);
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--accent-gold), var(--teal-light), var(--accent-gold));
+  }
+  .hero-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 3rem;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+  }
+  .hero-photo {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--teal);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: rgba(255,255,255,0.9);
+    border: 3px solid rgba(255,255,255,0.15);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+  }
+  .hero-text h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+  .hero-text .subtitle {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: rgba(255,255,255,0.75);
+    margin-bottom: 1rem;
+  }
+  .hero-text .tagline {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.15rem;
+    color: var(--accent-gold);
+    margin-bottom: 1.5rem;
+  }
+  .hero-links { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+  .hero-links a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+    font-size: 0.85rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: color 0.3s;
+  }
+  .hero-links a:hover { color: #fff; }
+  .hero-links .dot { color: var(--teal-light); }
+
+  /* SECTIONS */
+  .section {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+  }
+  .section-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+    position: relative;
+    display: inline-block;
+  }
+  .section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    width: 50px;
+    height: 3px;
+    background: var(--teal);
+    border-radius: 2px;
+  }
+  .section-subtitle {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    margin-bottom: 2.5rem;
+    margin-top: 0.75rem;
+  }
+  .divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0;
+  }
+
+  /* ABOUT */
+  .about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .about-text p { margin-bottom: 1rem; color: var(--text); }
+  .about-interests {
+    background: var(--sand);
+    border-radius: 8px;
+    padding: 2rem;
+    border-left: 3px solid var(--teal);
+  }
+  .about-interests h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .interest-tags { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+  .interest-tag {
+    background: #fff;
+    border: 1px solid var(--border);
+    padding: 0.35rem 0.85rem;
+    border-radius: 20px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--slate);
+  }
+
+  /* RESEARCH */
+  .pub-item {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid var(--border);
+  }
+  .pub-item:last-child { border-bottom: none; }
+  .pub-type {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    margin-bottom: 0.4rem;
+  }
+  .pub-title {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    line-height: 1.4;
+  }
+  .pub-authors {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    margin-bottom: 0.2rem;
+  }
+  .pub-venue {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--warm-gray);
+  }
+  .pub-award {
+    display: inline-block;
+    margin-top: 0.4rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--accent-gold);
+    border: 1px solid var(--accent-gold);
+    padding: 0.15rem 0.6rem;
+    border-radius: 3px;
+  }
+
+  /* TEACHING */
+  .teaching-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+  }
+  .teaching-card {
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 1.5rem;
+    transition: box-shadow 0.3s;
+  }
+  .teaching-card:hover { box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .teaching-role {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--teal);
+    margin-bottom: 0.3rem;
+  }
+  .teaching-course {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.2rem;
+  }
+  .teaching-detail {
+    font-size: 0.88rem;
+    color: var(--text-light);
+  }
+
+  /* EDUCATION */
+  .edu-timeline { position: relative; padding-left: 2rem; }
+  .edu-timeline::before {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 8px;
+    bottom: 8px;
+    width: 2px;
+    background: var(--border);
+  }
+  .edu-item {
+    position: relative;
+    margin-bottom: 2rem;
+  }
+  .edu-item::before {
+    content: '';
+    position: absolute;
+    left: -2rem;
+    top: 8px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: var(--teal);
+    border: 3px solid var(--cream);
+    box-shadow: 0 0 0 1px var(--teal);
+  }
+  .edu-year {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--teal);
+    letter-spacing: 0.05em;
+  }
+  .edu-degree {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--navy);
+  }
+  .edu-school {
+    font-size: 0.92rem;
+    color: var(--text-light);
+  }
+  .edu-note {
+    font-size: 0.85rem;
+    color: var(--warm-gray);
+    font-style: italic;
+    margin-top: 0.2rem;
+  }
+
+  /* CV BANNER */
+  .cv-banner {
+    background: var(--sand);
+    text-align: center;
+    padding: 3rem 2rem;
+  }
+  .cv-banner p {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.3rem;
+    color: var(--navy);
+    margin-bottom: 1rem;
+  }
+  .cv-btn {
+    display: inline-block;
+    background: var(--navy);
+    color: #fff;
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
+    transition: background 0.3s;
+  }
+  .cv-btn:hover { background: var(--teal); }
+
+  /* FOOTER */
+  footer {
+    background: var(--navy);
+    color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 2.5rem 2rem;
+    font-size: 0.85rem;
+  }
+  footer .footer-email {
+    color: rgba(255,255,255,0.85);
+    text-decoration: none;
+    font-weight: 500;
+  }
+  footer .footer-email:hover { color: #fff; }
+  footer .footer-dept {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.4);
+  }
+
+  /* MOBILE */
+  @media (max-width: 768px) {
+    .hero-inner { grid-template-columns: 1fr; text-align: center; justify-items: center; gap: 1.5rem; }
+    .hero-text h1 { font-size: 2.2rem; }
+    .hero-links { justify-content: center; }
+    .about-grid { grid-template-columns: 1fr; }
+    .teaching-grid { grid-template-columns: 1fr; }
+    nav .nav-links { gap: 1rem; }
+    nav .nav-links a { font-size: 0.75rem; }
+  }
+
+  /* ANIMATIONS */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  .hero-inner { animation: fadeUp 0.8s ease-out; }
+  .section { animation: fadeUp 0.6s ease-out; }
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="nav-inner">
+    <div class="nav-name">Catherine D. Grant</div>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#education">Education</a>
+    </div>
+  </div>
+</nav>
+
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-photo">CG</div>
+    <div class="hero-text">
+      <h1>Catherine D. Grant</h1>
+      <div class="subtitle">PhD Student &middot; Department of Agricultural and Resource Economics &middot; Colorado State University</div>
+      <div class="tagline">Water policy, drought conservation, and resource economics</div>
+      <div class="hero-links">
+        <a href="mailto:catherine.grant@colostate.edu">catherine.grant@colostate.edu</a>
+        <span class="dot">&middot;</span>
+        <a href="https://scholar.google.com/citations?hl=en&user=UF8ZOVkAAAAJ" target="_blank">Google Scholar</a>
+        <span class="dot">&middot;</span>
+        <a href="#cv">CV</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="about">
+  <h2 class="section-title">About</h2>
+  <p class="section-subtitle">Economist studying how water policy shapes communities and resources</p>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I am a PhD student in Agricultural and Resource Economics at Colorado State University. My research examines how water conservation mandates and drought policy create lasting change in how communities use and value water. My dissertation investigates the long-term effects of California's water conservation mandates from 2012 to 2022.</p>
+      <p>Originally from Ghana, I have studied and worked across four countries — Ghana, Denmark, the United States (Wyoming and Colorado) — bringing an international perspective to questions of resource scarcity, water governance, and the economics of extraction. My published work in the <em>Agricultural and Resource Economics Review</em> analyzes demand for water rights transfers and leases in western U.S. water markets.</p>
+      <p>Beyond research, I have taught nine courses across two universities, reaching over 400 students. I currently instruct Principles of Microeconomics to 108 students at CSU. I serve as Music Director at Pentecost International Worship Centre in Fort Collins and coordinate events with the CSU African Graduate Students Association.</p>
+    </div>
+    <div class="about-interests">
+      <h3>Research Interests</h3>
+      <div class="interest-tags">
+        <span class="interest-tag">Water Policy</span>
+        <span class="interest-tag">Drought Conservation</span>
+        <span class="interest-tag">Resource Economics</span>
+        <span class="interest-tag">Water Markets</span>
+        <span class="interest-tag">Agricultural Economics</span>
+        <span class="interest-tag">Price Elasticity of Water Demand</span>
+        <span class="interest-tag">Climate Adaptation</span>
+        <span class="interest-tag">Colorado River Basin</span>
+        <span class="interest-tag">Conservation Mandates</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" id="research">
+  <h2 class="section-title">Research</h2>
+  <p class="section-subtitle">Publications, working papers, and thesis work</p>
+
+  <div class="pub-item">
+    <div class="pub-type">Working Paper</div>
+    <div class="pub-title">The Lasting Effects of Water Conservation Mandates: Evidence from California's Two Major Droughts (2012–2022)</div>
+    <div class="pub-authors">Catherine Grant</div>
+    <div class="pub-venue">Dissertation paper in progress, Colorado State University</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-type">Journal Article</div>
+    <div class="pub-title">An Empirical Analysis of Demand for Water Rights Transfers and Leases in Western Water Markets</div>
+    <div class="pub-authors">Kristiana Hansen, Vardges Hovhannisyan, and Catherine Grant</div>
+    <div class="pub-venue">Agricultural and Resource Economics Review, 1–22 (2025)</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-type">Master's Thesis</div>
+    <div class="pub-title">Quantifying the Price Elasticity of Water Demand in Cheyenne, WY: Implications for Drought Management and Policy in the Colorado River Basin</div>
+    <div class="pub-authors">Catherine Grant</div>
+    <div class="pub-venue">M.S. Thesis, University of Wyoming (2024)</div>
+    <div class="pub-award">3rd Place — WAEA Graduate Student Paper Competition, 2024</div>
+  </div>
+
+  <div class="pub-item">
+    <div class="pub-type">Undergraduate Thesis</div>
+    <div class="pub-title">Effect of Street Vending on the Revenue of Shop Owners in Winneba, Ghana</div>
+    <div class="pub-authors">Catherine Grant</div>
+    <div class="pub-venue">B.A. Thesis, University of Education, Winneba (2020)</div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" id="teaching">
+  <h2 class="section-title">Teaching</h2>
+  <p class="section-subtitle">9 courses across two universities, reaching 400+ students</p>
+
+  <div class="teaching-grid">
+    <div class="teaching-card">
+      <div class="teaching-role">Instructor of Record</div>
+      <div class="teaching-course">Principles of Microeconomics</div>
+      <div class="teaching-detail">AGEC/ECON 202 &middot; CSU &middot; Spring 2026 &middot; 108 students</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Instructor of Record</div>
+      <div class="teaching-course">Principles of Microeconomics</div>
+      <div class="teaching-detail">AGEC/ECON 202 &middot; CSU &middot; Summer 2025 &middot; 31 students (Online)</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Instructor of Record</div>
+      <div class="teaching-course">Agricultural Policy</div>
+      <div class="teaching-detail">AREC 578 &middot; CSU &middot; Spring 2025 &middot; 40 students (Online)</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Instructor of Record</div>
+      <div class="teaching-course">Agricultural and Resource Economics</div>
+      <div class="teaching-detail">AREC 202 &middot; CSU &middot; Fall 2024 &middot; 34 students (Online)</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Teaching Assistant</div>
+      <div class="teaching-course">Water Law, Policy, and Institutions</div>
+      <div class="teaching-detail">CSU &middot; Fall 2025 &middot; 112 students (Two sections)</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Teaching Assistant</div>
+      <div class="teaching-course">Economics of Outdoor Recreation</div>
+      <div class="teaching-detail">CSU &middot; Fall 2024 &middot; 30 students</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Teaching Assistant</div>
+      <div class="teaching-course">Principles of Macroeconomics</div>
+      <div class="teaching-detail">University of Wyoming &middot; 2022–2024</div>
+    </div>
+    <div class="teaching-card">
+      <div class="teaching-role">Teaching Assistant</div>
+      <div class="teaching-course">Principles of Microeconomics</div>
+      <div class="teaching-detail">University of Wyoming &middot; 2022–2024</div>
+    </div>
+  </div>
+</section>
+
+<hr class="divider">
+
+<section class="section" id="education">
+  <h2 class="section-title">Education</h2>
+  <div class="edu-timeline">
+    <div class="edu-item">
+      <div class="edu-year">2024 – Present</div>
+      <div class="edu-degree">PhD, Agricultural and Resource Economics</div>
+      <div class="edu-school">Colorado State University, Fort Collins, CO</div>
+      <div class="edu-note">Dissertation: The lasting effects of water conservation mandates</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2022 – 2024</div>
+      <div class="edu-degree">M.S., Agricultural and Applied Economics (Minor: Statistics)</div>
+      <div class="edu-school">University of Wyoming &middot; GPA: 4.00</div>
+      <div class="edu-note">Thesis: Price elasticity of water demand in Cheyenne, WY</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2019</div>
+      <div class="edu-degree">Exchange Semester</div>
+      <div class="edu-school">University College Copenhagen, Denmark</div>
+    </div>
+    <div class="edu-item">
+      <div class="edu-year">2016 – 2020</div>
+      <div class="edu-degree">B.A., Economics Education (First Class Honors)</div>
+      <div class="edu-school">University of Education, Winneba, Ghana &middot; GPA: 3.62/4.00</div>
+    </div>
+  </div>
+</section>
+
+<div class="cv-banner" id="cv">
+  <p>For a complete overview of my work, awards, and experience</p>
+  <a href="#" class="cv-btn">Download CV (PDF)</a>
+</div>
+
+<footer>
+  <a href="mailto:catherine.grant@colostate.edu" class="footer-email">catherine.grant@colostate.edu</a>
+  <div class="footer-dept">Department of Agricultural and Resource Economics &middot; Colorado State University &middot; Fort Collins, CO</div>
+</footer>
+
+</body>
+</html>
